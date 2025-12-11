@@ -71,9 +71,3 @@ Compile using g++17:
 g++ -g -I include -I src -std=c++17 src/test/* src/main.cpp -o main
 ./main [testcase_name]
 ```
-
----
-
-## License
-MIT (or adjust per course requirement)
-
