@@ -74,17 +74,6 @@ g++ -g -I include -I src -std=c++17 src/test/* src/main.cpp -o main
 
 ---
 
-## Submission Checklist
-- Completed:
-  - `/include/hash/xMap.h`
-  - `/include/heap/Heap.h`
-  - `/include/app/inventory_compressor.h`
-- All sample tests pass
-- Follows required folder structure
-- No external libraries used
-
----
-
 ## License
 MIT (or adjust per course requirement)
 
