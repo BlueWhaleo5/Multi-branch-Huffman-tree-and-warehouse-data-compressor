@@ -1,10 +1,6 @@
 /*
  * DSA1 - HK242
  * file : main.cpp
- * SRC template
- * Author: Võ Tiến
- * Link FB : https://www.facebook.com/Shiba.Vo.Tien
- * Link Group : https://www.facebook.com/groups/khmt.ktmt.cse.bku
  * Date: 25.02.2024
  */
 //g++ -std=c++17 -g -o build\Debug\outDebug.exe -Iinclude -Itest -Itest\unit_test_hash main.cpp test\unit_test_hash\unit_test_hash.cpp test\unit_test.cpp src\Point.cpp src\hash.cpp test\unit_test_hash\test_case\*.cpp
