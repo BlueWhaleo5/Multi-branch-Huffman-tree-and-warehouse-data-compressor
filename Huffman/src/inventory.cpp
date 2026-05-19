@@ -3,7 +3,6 @@
 // // -------------------- InventoryManager Method Definitions --------------------
 InventoryManager::InventoryManager()
 {
-    // TODO
     attributesMatrix = List2D<InventoryAttribute>();
     productNames = List1D<string>();
     quantities = List1D<int>();
@@ -13,7 +12,6 @@ InventoryManager::InventoryManager(const List2D<InventoryAttribute> &matrix,
                                    const List1D<string> &names,
                                    const List1D<int> &quantities)
 {
-    // TODO
     this->attributesMatrix = matrix;
     this->productNames = names;
     this->quantities = quantities;
@@ -21,7 +19,6 @@ InventoryManager::InventoryManager(const List2D<InventoryAttribute> &matrix,
 
 InventoryManager::InventoryManager(const InventoryManager &other)
 {
-    // TODO
     this->attributesMatrix = other.attributesMatrix;
     this->productNames = other.productNames;
     this->quantities = other.quantities;
@@ -29,13 +26,11 @@ InventoryManager::InventoryManager(const InventoryManager &other)
 
 int InventoryManager::size() const
 {
-    // TODO
     return productNames.size();
 }
 
 List1D<InventoryAttribute> InventoryManager::getProductAttributes(int index) const
 {
-    // TODO
     if (index < 0 || index >= size()) {
         throw out_of_range("Index is invalid!");
     }
@@ -51,7 +46,6 @@ List1D<InventoryAttribute> InventoryManager::getProductAttributes(int index) con
 
 string InventoryManager::getProductName(int index) const
 {
-    // TODO
     if (index < 0 || index >= size()) {
         throw out_of_range("Index is invalid!");
     }
@@ -60,7 +54,6 @@ string InventoryManager::getProductName(int index) const
 
 int InventoryManager::getProductQuantity(int index) const
 {
-    // TODO
     if (index < 0 || index >= size()) {
         throw out_of_range("Index is invalid!");
     }
@@ -69,7 +62,6 @@ int InventoryManager::getProductQuantity(int index) const
 
 void InventoryManager::updateQuantity(int index, int newQuantity)
 {
-    // TODO
     if (index < 0 || index >= size()) {
         throw out_of_range("Index is invalid!");
     }
@@ -78,7 +70,6 @@ void InventoryManager::updateQuantity(int index, int newQuantity)
 
 void InventoryManager::addProduct(const List1D<InventoryAttribute> &attributes, const string &name, int quantity)
 {
-    // TODO
     attributesMatrix.setRow(attributesMatrix.rows(), attributes);
     productNames.add(name);
     quantities.add(quantity);
@@ -86,7 +77,6 @@ void InventoryManager::addProduct(const List1D<InventoryAttribute> &attributes, 
 
 void InventoryManager::removeProduct(int index)
 {
-    // TODO
     if (index < 0 || index >= size()) {
         throw out_of_range("Index is invalid!");
     }
@@ -111,7 +101,6 @@ void InventoryManager::removeProduct(int index)
 List1D<string> InventoryManager::query(string attributeName, const double &minValue,
                                        const double &maxValue, int minQuantity, bool ascending) const
 {
-    // TODO
     List1D<int> validIndices;
     List1D<double> attributeValues;
     List1D<int> productQuantities;
@@ -245,7 +234,6 @@ void InventoryManager::removeDuplicates()
 InventoryManager InventoryManager::merge(const InventoryManager &inv1,
                                          const InventoryManager &inv2)
 {
-    // TODO
     InventoryManager mergedInventory;
 
     for (int i = 0; i < inv1.size(); i++) {
@@ -271,7 +259,6 @@ void InventoryManager::split(InventoryManager &section1,
                              InventoryManager &section2,
                              double ratio) const
 {
-    // TODO
     double product = size() * ratio;
     double diff = product - (int)product;
     if (diff < 0)  
@@ -300,25 +287,21 @@ void InventoryManager::split(InventoryManager &section1,
 
 List2D<InventoryAttribute> InventoryManager::getAttributesMatrix() const
 {
-    // TODO
     return attributesMatrix;
 }
 
 List1D<string> InventoryManager::getProductNames() const
 {
-    // TODO
     return productNames;
 }
 
 List1D<int> InventoryManager::getQuantities() const
 {
-    // TODO
     return quantities;
 }
 
 string InventoryManager::toString() const
 {
-    // TODO
     stringstream ss;
     ss << "InventoryManager[\n";
     
