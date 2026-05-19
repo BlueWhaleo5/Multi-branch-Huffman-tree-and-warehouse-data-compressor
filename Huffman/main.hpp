@@ -1,10 +1,6 @@
 /*
  * DSA1 - HK242
  * file : main.hpp
- * SRC template
- * Author: Võ Tiến
- * Link FB : https://www.facebook.com/Shiba.Vo.Tien
- * Link Group : https://www.facebook.com/groups/khmt.ktmt.cse.bku
  * Date: 10.9.2024
  */
 
