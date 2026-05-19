@@ -30,11 +30,10 @@ public:
     void set(int index, T value);
     void add(const T &value);
 
-    //! thêm hàm này 
     void add(int index ,const T &value);
     void removeAt(int index);
     string toString() const;
-    template <typename U> //! thêm vào  để chạy test 
+    template <typename U>
     friend ostream &operator<<(ostream &os, const List1D<T> &list);
 };
 
@@ -57,19 +56,19 @@ public:
     T get(int rowIndex, int colIndex) const;
     List1D<T> getRow(int rowIndex) const;
     string toString() const;
-    template <typename U> //! thêm vào  để chạy test 
+    template <typename U>
     friend ostream &operator<<(ostream &os, const List2D<T> &matrix);
 };
 struct InventoryAttribute
 {
     string name;
     double value;
-    //! thêm
+
     InventoryAttribute() : name(""), value(0.0) {}  // Constructor mặc định
     InventoryAttribute(const string &name, double value) : name(name), value(value) {}
     string toString() const { return name + ": " + to_string(value); }
-     //! thêm
-     // Định nghĩa toán tử so sánh ==
+
+     // Định nghĩa toán tử so sánh
      bool operator==(const InventoryAttribute& other) const {
         return name == other.name && value == other.value;
     }
@@ -125,20 +124,6 @@ public:
     List1D<int> getQuantities() const;
     string toString() const;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -261,23 +246,6 @@ ostream &operator<<(ostream &os, const List1D<T> &list)
     os << list.toString();
     return os;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -424,23 +392,6 @@ ostream &operator<<(ostream &os, const List2D<T> &matrix)
     os << matrix.toString();
     return os;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -747,7 +698,6 @@ ostream &operator<<(ostream &os, const List2D<T> &matrix)
 
 // string InventoryManager::toString() const
 // {
-//     // TODO
 //     stringstream ss;
 //     ss << "InventoryManager[\n";
     
